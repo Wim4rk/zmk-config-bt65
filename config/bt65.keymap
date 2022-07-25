@@ -80,7 +80,7 @@
                 &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans    &trans                 &kp C_BRI_DN
                 &trans   &trans &trans &trans &trans &trans &trans &trans &trans &trans  &trans &trans       &trans                  &kp C_BRI_MAX
                 &trans    &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &kp K_APP  &kp CAPS     &kp K_VOL_UP &kp C_BRI_MIN
-                &bl BL_DEC &bl BL_TOG &bl BL_INC          &C_PP                &trans   &trans   &trans    &kp K_PREV   &kp K_VOL_DN &kp K_NEXT
+                &bl BL_DEC &bl BL_TOG &bl BL_INC          &kp C_PP             &trans   &trans   &trans    &kp K_PREV   &kp K_VOL_DN &kp K_NEXT
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
