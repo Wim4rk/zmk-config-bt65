@@ -34,11 +34,11 @@
 
 		default_layer {
 				// -------------------------------------------------------------------------------------------------
-				// | ESC |  1  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |  9  |  0  |  -  |  =  |    BKSP   | DEL |
-				// | TAB  |  Q  |  W  |  E  |  R  |  T  |  Y  |  U  |  I  |  O  |  P  |  [  |  ]  |   ' *    | INS |
-				// | Cps/FN1|  A  |  S  |  D  |  F  |  G  |  H  |  J  |  K  |  L  |  ;  |  '  |  ENTER       | HOME|
-				// | SHIFT   |  Z  |  X  |  C  |  V  |  B  |  N  |  M  |  ,  |  .  | /   |   SHIFT     | UP  | END|
-				// | CTL   |  WIN  |  ALT  |            SPACE               | ALT |  1   |  CTL | LEFT | DOWN|RIGHT|
+				// | ESC |  1  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |  9  |  0  |  +  |  ´  |    BKSP   | DEL |
+				// | TAB  |  Q  |  W  |  E  |  R  |  T  |  Y  |  U  |  I  |  O  |  P  |  Å  |  ¨  |    ''    | INS |
+				// | Cps/FN1|  A  |  S  |  D  |  F  |  G  |  H  |  J  |  K  |  L  |  Ö  |  Ä  |    ENTER     | HOME|
+				// | SHIFT   |  Z  |  X  |  C  |  V  |  B  |  N  |  M  |  ,  |  .  |  -  |   SHIFT      | UP | END |
+				// | CTL   |  WIN  |  ALT  |            SPACE               | ALT  | FN2  |  CTL | LEFT |DOWN|RIGHT|
 				// -------------------------------------------------------------------------------------------------
 			bindings = <
 
@@ -53,15 +53,15 @@
 		symbols {
                 // -------------------------------------------------------------------------------------------------
                 // | ESC |  1  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |  9  |  0  |  -  |  =  |    BKSP   | DEL |
-                // | TAB  |  Q  |  W  |  E  |  R  |  T  |  Y  |  U  |  I  |  O  |  P  |  [  |  ]  |    \     | PrSc|
-                // | Cps/FN1| @  |  S  |  $  |  &  |  {  |  (  |  )  |  }  |  Ä  |  ;  |  '  |  ENTER        | PgUp|
-                // | SHIFT   |  Z  |  X  |  C  |  V  |  B  |  N  |  M  |  ,  |  .  | /   |   SHIFT     | UP  | PgDn|
-                // | CTL   |  WIN  |  ALT  |            SPACE               | ALT | 1    |  CTL | LEFT | DOWN|RIGHT|
+                // | TAB  |  Q  |  W  |  E  |  R  |  T  |  Y  |  U  |  I  |  O  |  P  |  Å  |  ¨  |    ''    | PrSc|
+                // | Cps/FN1| @  |  S  |  $  |  &  |  G  |  {  |  (  |  )  |  }  |  Ä  |  §  |  ENTER        | PgUp|
+                // | SHIFT   |  Z  |  X  |  C  |  V  |  B  |  N  |  M  |  ,  |  .  | /   |   SHIFT      | UP | PgDn|
+                // | CTL   |  WIN  |  ALT  |            SPACE                | ALT | FN2  |  CTL | LEFT |DOWN|RIGHT|
                 // -------------------------------------------------------------------------------------------------
 			bindings = <
 				&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans          &trans            &trans
 				&trans  &trans &trans &trans &trans &trans &trans &kp LS(MINUS) &kp RA(N8) &kp RA(N9) &kp LS(N7) &trans &trans &trans &kp PSCRN
-				&trans &kp RA(N2) &trans &kp RA(N4) &kp LS(N6) &trans &kp RA(N7) &kp LS(N8) &kp LS(N9) &kp RA(N0) &kp DQT &kp GRAVE   &trans &kp PG_UP
+				&trans &kp RA(N2) &trans &kp RA(N4) &kp LS(N6) &trans &kp LS(N6) &kp RA(N7) &kp LS(N8) &kp LS(N9) &kp RA(N0) &kp GRAVE  &trans &kp PG_UP
 				&trans   &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans                  &trans &kp PG_DN
 				&trans   &trans    &trans                &trans                       &trans    &trans      &trans      &trans &trans &trans
 			>;
