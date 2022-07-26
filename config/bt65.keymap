@@ -44,8 +44,8 @@
 
 				&gresc  &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp  N8   &kp  N9   &kp N0 &kp MINUS &kp EQUAL   &kp BKSP &kp DEL
 				&kp TAB  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp  I    &kp  O  &kp  P   &kp LBKT &kp RBKT    &kp BSLH &kp INS
-				&lt 1 CAPS &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp K  &kp  L  &kp SEMI &kp SQT       &kp RET        &kp HOME
-				&kp LSHFT &kp Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH       &kp RSHFT       &kp UP &kp END
+				&lt 1 CAPS &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp K  &kp  L  &kp SEMI &kp SQT        &kp RET         &kp HOME
+				&kp LSHFT &kp Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH     &kp RSHFT       &kp UP   &kp END
 				&kp LCTRL &kp LGUI &kp LALT            &kp SPACE                      &kp RALT  &mo 2  &kp RCTRL &kp LEFT &kp DOWN &kp RIGHT
 			>;
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -69,14 +69,14 @@
 		};
         functions {
                 // -------------------------------------------------------------------------------------------------
-                // |  ~  |  F1 |  F2 |  F3 |  F4 |  F5 |  F6 |  F7 |  F8 |  F9 | F10 | F11 | F12 |   BKSP   | BRUP|
-                // | TAB  |  Q  |  W  |  E  |  R  |  T  |  Y  |  U  |  I  |  O  |  P  |  [  |  ]  |   \     | BRDN|
-                // | C/FN2  |  A  |  S  |  D  |  F  |  G  |  H  |  J  |  K  |  L  |  ;  |  '  |  ENTER      |     |
-                // | SHIFT    |  Z  |  X  |  C  |  V  |  B  |  N  |  M  |  ,  |  .  | /   |   SHIFT   | VOLU|     |
-                // | BL - |BL TOG | BL +  |             PLAY               | ALT  |  FN1 |  CTL | PREV| VOLD| NXT |
+                // |  ~  |  F1 |  F2 |  F3 |  F4 |  F5 |  F6 |  F7 |  F8 |  F9 | F10 | F11 | F12 |   POWER   | BRUP|
+                // | TAB  |  Q  |  W  |  E  |  R  |  T  |  Y  |  U  |  I  |  O  |  P  |  [  |  ]  |    \     | BRDN|
+                // | C/FN2  |  A  |  S  |  D  |  F  |  G  |  H  |  J  |  K  |  L  |  ;  |  '  |   ENTER      |     |
+                // | SHIFT    |  Z  |  X  |  C  |  V  |  B  |  N  |  M  |  ,  |  .  |  /  |    SHIFT   | VOLU|     |
+                // | BL - |BL TOG | BL +  |             PLAY                | ALT  |  FN1 |  CTL | PREV| VOLD| NXT |
                 // -------------------------------------------------------------------------------------------------
             bindings = <
-                &kp GRAVE &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12  &trans             &kp C_BRI_UP
+                &kp GRAVE &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12  &ext_power EP_TOG  &kp C_BRI_UP
                 &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans    &trans                 &kp C_BRI_DN
                 &trans   &trans &trans &trans &trans &trans &trans &trans &trans &trans  &trans &trans       &trans                  &trans
                 &trans    &trans &trans &trans &trans &trans &trans &trans &trans &trans &kp K_APP    &kp CAPS          &kp K_VOL_UP &trans
@@ -89,12 +89,11 @@
                 // |BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |  6  |  7  |  8  |  9  |  0  |  -  |  =  |   RESET   |     |
                 // | TAB  |  Q  |  W  |  E  |  R  |  T  |  Y  |  U  |  I  |  O  |  P  |  [  |  ]  |    \     | HUI |
                 // | CAPS  |  A  |  S  |  D  |  F  |  G  |  H  |  J  |  K  |  L  |  ;  |  '  |    BOOT       | HUD |
-                // |  SHIFT  |  Z  |  X  |  C  |  V  |  B  |  N  |  M  |  ,  |  .  | /   |   SHIFT     | UP  |     |
-                // |  CTL  |  WIN  |  ALT  |            PLAY                | ALT | 1    |  CTL | LEFT | DOWN|RIGHT|
+                // | SHIFT  |  Z  |  X  |  C  |  V  |  B  |  N  |  M  |  ,  |  .  |  /  |    SHIFT     | UP  |     |
+                // | RGBUp | RGB-tog | RGBDn |          PLAY               | ALT |  FN2  |  CTL | LEFT | DOWN|RIGHT|
                 // -------------------------------------------------------------------------------------------------
             bindings = <
-                &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &trans &trans &trans &trans &trans &trans &trans
-                                                                                                                   &reset &trans
+                &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &trans &trans &trans &trans &trans &trans &trans &reset &trans
                 &trans  &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans  &trans            &rgb_ug RGB_HUI
                 &trans   &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans       &bootloader        &rgb_ug RGB_HUD
                 &trans     &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans       &trans           &trans &trans
